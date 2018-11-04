@@ -1,24 +1,17 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Description
+The company has several employees that should be added to the system where the HR employees can mark employees attendance, off days, sick leave, working hours per day.
 
-Things you may want to cover:
+Phase 1
 
-* Ruby version
+    Design a database for the system, implement it.
 
-* System dependencies
+Phase 2
 
-* Configuration
+    Implement Login function and view for employees.
 
-* Database creation
+    Implement Manage Employees View ( Add,Edit,Delete).
 
-* Database initialization
+Phase 3
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    Implement Attendance function (HR Employee(User) can select another employee and select a date and attendance)
