@@ -1,0 +1,9 @@
+<%= simple_form_for @employee do |f| %>
+  <%= f.input :name %>
+  <%= f.input :email %>
+  <%= f.input :mobile %>
+  <%= f.input :hire_date %>
+  <%= f.button :submit %>
+    <br>
+  <p>or <%= link_to 'Return', employees_path %> </p>
+<% end %>

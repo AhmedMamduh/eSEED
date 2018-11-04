@@ -1,4 +1,4 @@
-class EmployeeController < ApplicationController
+class EmployeesController < ApplicationController
   before_action :find_employee, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -35,7 +35,7 @@ class EmployeeController < ApplicationController
 
   def destroy
   		@employee.destroy
-		redirect_to root_path
+		redirect_to employees_path
   end
 
   private
