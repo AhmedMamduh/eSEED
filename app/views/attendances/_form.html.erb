@@ -1,9 +1,31 @@
-<%= simple_form_for @attendance do |f| %>
-  <%= f.input :day %>
-  <%= f.input :working_hours %>
-  <%= f.input :employee_id, :input_html => { :value => @my_id }%>
-  <%= f.input :status_id %>
-  <%= f.button :submit %>
+<div class="col-md-6 col-md-offset-3">
+  <div class="row">
+    <div class="contact-form">
+      <div class="panel-body">
+		<%= simple_form_for @attendance do |f| %>
+		  <div class="form-group">
+			  <%= f.label :day %><br />
+			  <%= f.input_field  :day, class: "form-control" %>
+		  </div>
+		  <div class="form-group">
+			  <%= f.label :working_hours %><br />
+			  <%= f.input_field :working_hours, class: "form-control"  %>
+		  </div>
+		  <div class="form-group">
+			  <%= f.label :employee_id %><br />
+			  <%= f.input_field :employee_id,  :value => @my_id , class: "form-control", disabled: true  %>
+		  </div>
+		  <div class="form-group">
+			  <%= f.label :status_id %><br />
+			  <%= f.input_field :status_id, class: "form-control"  %>
+		  </div>
+		  <div class="form-group">
+		  	<%= f.submit "Add Attendance", class: "btn btn-info" %>
+		  </div>
+		<% end %>
+	  </div>
+	</div>
     <br>
-  <p>or <%= link_to 'Return', attendances_path %> </p>
-<% end %>
+    <p>or <%= link_to 'Return', employees_path %> </p>
+  </div>
+</div>

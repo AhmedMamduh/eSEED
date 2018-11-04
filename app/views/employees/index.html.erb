@@ -1,8 +1,8 @@
 <h1>Listing Employees</h1>
 
-<table>
+<table class="table">
   <thead>
-    <tr>
+    <tr class="items">
       <th>Name</th>
       <th>Email</th>
       <th>Mobile</th>
@@ -13,16 +13,16 @@
 
   <tbody>
     <% @employees.each do |employee| %>
-      <tr>
+      <tr class="items">
         <td><%= employee.name %></td>
         <td><%= employee.email %></td>
         <td><%= employee.mobile %></td>
         <td><%= employee.hire_date %></td>
         <td><%= link_to 'Show', employee %></td>
         <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
-        <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% @my_id = employee.id %>
         <td><%= link_to 'Add Attendance', new_attendance_path(my_id: @my_id) %></td>
+        <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>

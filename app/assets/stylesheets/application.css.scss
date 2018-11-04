@@ -1,0 +1,223 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  margin: 0px 30px 30px 30px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  line-height: 18px;
+  height: 98%;
+}
+
+html {
+  height: 98%;
+}
+
+p, ol, ul {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+nav{
+	border: none !important;
+	padding: 15px !important;
+	background-color: rgba(255, 255, 255, 0.7) !important;
+	z-index: 3;
+	Right: 30px !important;
+	Left: 30px !important;
+	font-weight: bold;
+	font-size: 100px !important;
+}
+
+.logout {
+	color: #337ab7;
+	border: none;
+	background-color: white;
+	float: right;
+	padding-right:0;
+
+	&:hover {
+		color: #ff9966;
+	}
+}
+
+#container {
+   min-height:97%;
+}
+
+.container2 {
+	position: relative;
+	min-height:97%;
+   	padding-left: 10%;
+	padding-right: 10%;
+	width: 100%;
+
+	h2 {
+		text-align: center;
+	}
+
+	ul,p {
+	  font-family: verdana, arial, helvetica, sans-serif;
+	  font-size: 16px;
+	  line-height: 28px;
+	}
+}
+
+#notice {
+	color: #000 !important;
+	border: 2px solid #0099ff;
+	padding: 1em;
+	margin-bottom: 2em;
+	background-color: #ffffff;
+	font: bold smaller sans-serif;
+}
+
+#main {
+	padding-top: 60px;
+}
+
+
+#pics {
+  margin: 0 auto;
+  width: 97%;
+
+  .box {
+	  margin: 15px;
+	  width: 97%;
+  	  min-height: 520px;
+  	  max-height: auto;
+	  box-shadow: 0 1px 1px 0 rgba(82,158,204, 0.48);
+	  border: none;
+	  text-align: center;
+
+	  .price_line {
+		position: absolute;
+		bottom: 25px;
+		left:0;
+		right:0;
+	  }
+
+	  img {
+	  	width: 88%;
+	  	height: 265px;
+	  }
+
+	  h2 {
+	  	font-size: 18px;
+	  	margin: 0;
+	  	font-weight: bold;
+	  	padding: 25px 10px;
+
+	  	a {
+			color: #529ECC;
+	  	}
+	  }
+	}
+}
+
+
+
+
+
+footer {
+    clear: both;
+    position: relative;
+
+	    .copyright-text p {
+		    color: gray;
+		    margin-top: 9px;
+		    margin-bottom: 0;
+		    text-align: center;
+		    padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+
+		.social-link {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		    text-align: center;
+		}
+		
+		.social-link li {
+		    display: inline-block;
+		    margin: 0 7px;
+		}
+
+		.social-link li a {
+		    color: gray;
+		    border: 1px solid gray;
+		    width: 40px;
+		    height: 40px;
+		    line-height: 40px;
+		    border-radius: 50%;
+		    text-align: center;
+		    display: inline-block;
+		    font-size: 18px;
+		}
+
+}
+
+
+.contact-form
+        {   
+            padding-top: 30px;
+            box-sizing: border-box;
+            background: rgba(0,0,0,.2);
+            border-radius:5px;
+        }
+
+
+        .contact-form h2
+         {
+            margin: 0;
+            padding: 0 0 20px;
+            color: #529ECC;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .contact-form p,
+        .contact-form label
+        {
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+            color: black;
+        }
+
+        .contact-form input
+        {
+            margin-bottom: 15px;
+        }
+
+
+        .contact-form a
+        {
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+
+
+
+
+
+

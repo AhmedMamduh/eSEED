@@ -1,9 +1,31 @@
-<%= simple_form_for @status do |f| %>
-  <%= f.input :present %>
-  <%= f.input :absent %>
-  <%= f.input :sick_leave %>
-  <%= f.input :day_off %>
-  <%= f.button :submit %>
+<div class="col-md-6 col-md-offset-3">
+  <div class="row">
+    <div class="contact-form">
+      <div class="panel-body">
+		<%= simple_form_for @status do |f| %>
+		  <div class="form-group">
+			  <%= f.label :present %><br />
+			  <%= f.input_field  :present, class: "form-control" %>
+		  </div>
+		  <div class="form-group">
+			  <%= f.label :absent %><br />
+			  <%= f.input_field :absent, class: "form-control"  %>
+		  </div>
+		  <div class="form-group">
+			  <%= f.label :sick_leave %><br />
+			  <%= f.input_field :sick_leave, class: "form-control" %>
+		  </div>
+		  <div class="form-group">
+			  <%= f.label :day_off %><br />
+			  <%= f.input_field :day_off, class: "form-control"  %>
+		  </div>
+		  <div class="form-group">
+		  	<%= f.submit "Add Status", class: "btn btn-info" %>
+		  </div>
+		<% end %>
+	  </div>
+	</div>
     <br>
-  <p>or <%= link_to 'Return', statuses_path %> </p>
-<% end %>
+    <p>or <%= link_to 'Return', statuses_path %> </p>
+  </div>
+</div>

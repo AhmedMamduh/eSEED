@@ -1,8 +1,8 @@
 <h1>Listing Attendances</h1>
 
-<table>
+<table class="table">
   <thead>
-    <tr>
+    <tr class="items">
       <th>Day</th>
       <th>Working Hours</th>
       <th>Employee</th>
@@ -13,17 +13,15 @@
 
   <tbody>
     <% @attendances.each do |attendance| %>
-      <tr>
+      <tr class="items">
         <td><%= attendance.day %></td>
         <td><%= attendance.working_hours %></td>
         <td><%= link_to 'Show Employee', attendance.employee %></td>
         <td><%= link_to 'Show Satuts', attendance.status %></td>
         <td><%= link_to 'Show', attendance %></td>
-        <td><%= link_to 'Destroy', attendance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', attendance, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-<%= link_to 'Add Attendance', new_attendance_path %>

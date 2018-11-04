@@ -1,8 +1,8 @@
 <h1>Listing Status</h1>
 
-<table>
+<table class="table">
   <thead>
-    <tr>
+    <tr class="items">
       <th>Present</th>
       <th>Absent Hours</th>
       <th>Sick Leave</th>
@@ -13,13 +13,13 @@
 
   <tbody>
     <% @statuses.each do |statuses| %>
-      <tr>
+      <tr class="items">
         <td><%= statuses.present %></td>
         <td><%= statuses.absent %></td>
         <td><%= statuses.sick_leave %></td>
         <td><%= statuses.day_off %></td>
         <td><%= link_to 'Show', statuses %></td>
-        <td><%= link_to 'Destroy', statuses, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', statuses, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>

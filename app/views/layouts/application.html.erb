@@ -7,18 +7,59 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <% if user_signed_in? %>
-      <p>Welcome <%= current_user.name %></p>
-      <%= link_to "Log out", destroy_user_session_path, method: :delete %><br>
-      <%= link_to "Attendences", attendances_path %><br>
-      <%= link_to "Employees", employees_path %><br>
-      <%= link_to "Status", statuses_path %><br>
-    <% end %>
-    <%= yield %>
+    <div id="container">
+      <div class="container">
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div id="navbar2" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <% if user_signed_in? %>
+                    <li><%= link_to "Welcome #{current_user.name}", employees_path %></li>
+                    <li><%= link_to "Employees", employees_path %></li>
+                    <li><%= link_to "Attendences", attendances_path %></li>
+                    <li><%= link_to "Status", statuses_path %></li>
+                    <li class="divider"></li>
+                    <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+                  </ul>
+                <% end %>
+            </div>
+            <!--/.nav-collapse -->
+          </div>
+          <!--/.container-fluid -->
+        </nav>
+      </div>
+      <div id="main" class="container">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <%= yield %>
+      </div>
+    </div>
+      <!-- Footer -->
+    <footer class="container">
+      <div class="col-xs">              
+        <ul class="social-link">
+          <li><a href="https://www.linkedin.com/in/ahmed-mamduh" target="_blank" ><span class="fa fa-linkedin"></span></a></li>
+          <li><a href="https://github.com/AhmedMamduh" target="_blank" ><span class="fa fa-github"></span></a></li>
+        </ul>             
+      </div>
+      <div class="col-xs">
+        <div class="copyright-text">
+          <p>Ahmed.Mamdouh © Copyright 2018</p>
+        </div>
+      </div>
+    </footer>
+      <!-- Footer -->
   </body>
 </html>
