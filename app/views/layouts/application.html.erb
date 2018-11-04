@@ -10,6 +10,13 @@
   </head>
 
   <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <% if user_signed_in? %>
+      <p>Welcome <%= current_user.name %></p>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete %><br>
+      <%= link_to "Attendence", employees_path %><br>
+    <% end %>
     <%= yield %>
   </body>
 </html>

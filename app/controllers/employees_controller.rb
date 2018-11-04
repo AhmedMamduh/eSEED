@@ -2,7 +2,11 @@ class EmployeesController < ApplicationController
   before_action :find_employee, only: [:show, :edit, :update, :destroy]
 
   def index
-  	@employees = Employee.all
+  	if user_signed_in? 
+      @employees = Employee.all
+    else
+      redirect_to user_session_path
+    end
   end
 
   def show
