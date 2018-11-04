@@ -21,7 +21,8 @@
         <td><%= link_to 'Show', employee %></td>
         <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
         <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to 'Add Attendance', new_attendance_path(employee.id) %></td>
+        <% @my_id = employee.id %>
+        <td><%= link_to 'Add Attendance', new_attendance_path(my_id: @my_id) %></td>
       </tr>
     <% end %>
   </tbody>

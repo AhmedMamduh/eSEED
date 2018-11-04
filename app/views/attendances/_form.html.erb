@@ -1,7 +1,7 @@
 <%= simple_form_for @attendance do |f| %>
   <%= f.input :day %>
   <%= f.input :working_hours %>
-  <%= f.input :employee_id %>
+  <%= f.input :employee_id, :input_html => { :value => @my_id }%>
   <%= f.input :status_id %>
   <%= f.button :submit %>
     <br>
