@@ -15,7 +15,9 @@
     <% if user_signed_in? %>
       <p>Welcome <%= current_user.name %></p>
       <%= link_to "Log out", destroy_user_session_path, method: :delete %><br>
-      <%= link_to "Attendence", employees_path %><br>
+      <%= link_to "Attendences", attendances_path %><br>
+      <%= link_to "Employees", employees_path %><br>
+      <%= link_to "Status", statuses_path %><br>
     <% end %>
     <%= yield %>
   </body>

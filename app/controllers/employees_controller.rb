@@ -3,7 +3,7 @@ class EmployeesController < ApplicationController
 
   def index
   	if user_signed_in? 
-      @employees = Employee.all
+      @employees = Employee.order("created_at DESC")
     else
       redirect_to user_session_path
     end

@@ -1,0 +1,9 @@
+<%= simple_form_for @status do |f| %>
+  <%= f.input :present %>
+  <%= f.input :absent %>
+  <%= f.input :sick_leave %>
+  <%= f.input :day_off %>
+  <%= f.button :submit %>
+    <br>
+  <p>or <%= link_to 'Return', statuses_path %> </p>
+<% end %>

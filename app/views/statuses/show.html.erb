@@ -1,0 +1,22 @@
+
+<p>
+  <strong>Present:</strong>
+  <%= @status.present %>
+</p>
+
+<p>
+  <strong>Absent:</strong>
+  <%= @status.absent %>
+</p>
+
+<p>
+  <strong>Sick Leave:</strong>
+  <%= @status.sick_leave %>
+</p>
+
+<p>
+  <strong>Day Off:</strong>
+  <%= @status.day_off %>
+</p>
+
+<%= link_to 'Back', statuses_path %>
