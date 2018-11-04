@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  present: 1
+  absent: 1
+  sick_leave: 1
+  day_off: 1
+
+two:
+  present: 1
+  absent: 1
+  sick_leave: 1
+  day_off: 1
